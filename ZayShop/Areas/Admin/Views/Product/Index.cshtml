@@ -23,7 +23,7 @@
         @foreach (var Product in Model.Products)
         {
             <tr>
-                <td class="w-25 h-25"><img class="object-fit-cover border rounded h-25 w-100"  src="@Product.PhotoPath" alt="Product" /></td>
+                <td class="w-25 h-25"><img class="object-fit-cover border rounded h-25 w-100" src="~/assets/img/@Product.PhotoName" alt="Product" /></td>
                 <td>@Product.Title</td>
                 <td>@Product.Size</td>
                 <td>@Product.Price</td>

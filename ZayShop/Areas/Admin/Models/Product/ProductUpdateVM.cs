@@ -10,10 +10,13 @@ namespace ZayShop.Areas.Admin.Models.Product
         [Display(Name = "Title")]
         public string Title { get; set; }
         public string Price { get; set; }
-        public string PhotoPath { get; set; }
+        public string? PhotoName { get; set; }
         public string Size { get; set; }
+        public IFormFile? Photo { get; set; }
+
         public List<SelectListItem>? Categories { get; set; }
         [Display(Name = "Category ")]
         public int CategoryId { get; set; }
     }
 }
+
