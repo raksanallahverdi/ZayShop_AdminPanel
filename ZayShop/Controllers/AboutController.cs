@@ -1,12 +1,25 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ZayShop.Data;
+using ZayShop.Models.About;
 
-namespace ZayShop.Controllers
+namespace ZayShop.Controllers;
+
+public class AboutController:Controller
 {
-    public class AboutController:Controller
+    private readonly AppDbContext _context;
+
+    public AboutController(AppDbContext context)
     {
-    public IActionResult Index()
-    {
-            return View();
-        }
+        _context = context;  
     }
+
+    public IActionResult Index()
+{
+        var model = new AboutIndexVM
+        {
+        
+        };
+        return View(model);
+
+}
 }

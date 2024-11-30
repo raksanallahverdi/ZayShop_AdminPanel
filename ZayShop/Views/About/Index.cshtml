@@ -1,4 +1,7 @@
-﻿<!-- Start Banner -->
+﻿@using ZayShop.Models.About;
+@model AboutIndexVM
+
+<!-- Start Banner -->
 <section class="bg-success py-5">
     <div class="container">
         <div class="row align-items-center py-5">
@@ -89,18 +92,7 @@
                                 <!--First slide-->
                                 <div class="carousel-item active">
                                     <div class="row">
-                                        <div class="col-3 p-md-5">
-                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_01.png" alt="Brand Logo"></a>
-                                        </div>
-                                        <div class="col-3 p-md-5">
-                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_02.png" alt="Brand Logo"></a>
-                                        </div>
-                                        <div class="col-3 p-md-5">
-                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_03.png" alt="Brand Logo"></a>
-                                        </div>
-                                        <div class="col-3 p-md-5">
-                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo"></a>
-                                        </div>
+                                        @await Component.InvokeAsync("Brand")
                                     </div>
                                 </div>
                                 <!--End First slide-->

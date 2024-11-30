@@ -1,0 +1,8 @@
+﻿@using ZayShop.Entities;
+@model List<Brand>
+@foreach(var brand in Model)
+{
+    <div class="col-3 p-md-5">
+        <a href="#"><img class="img-fluid brand-img" src="@brand.PhotoUrl" alt="Brand Logo"></a>
+    </div>
+}
